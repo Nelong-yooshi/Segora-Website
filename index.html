@@ -16,6 +16,7 @@
 	<body class="landing is-preload">
 
 		<!-- Page Wrapper -->
+			<div id="bottom" class="bottom-background">
 			<div id="page-wrapper">
 
 				<!-- Header -->
@@ -86,7 +87,21 @@
 					<div class="spacer"></div>
 
 					<div class="sticky-container wrapper-pin">
-						<img src="images/dopepic00.png" alt="image" class="main-image">
+						<img id="responsive-img" src="images/dopepic.png" alt="Responsive image" class="main-image">
+
+						<script>
+						function updateImage() {
+						const img = document.getElementById('responsive-img');
+						const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+						img.src = isPortrait ? "images/dopepic_mobile.png" : "images/dopepic.png";
+						}
+
+						// 初次載入時判斷一次
+						updateImage();
+
+						// 當視窗大小改變時再判斷（支援旋轉）
+						window.addEventListener('resize', updateImage);
+						</script>
 						
 						<div class="stuck-grid">
 							<div class="grid-item">Blockchain</div>
@@ -210,11 +225,11 @@
 					<section id="cta" class="wrapper style4">
 						<div class="inner">
 							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+								<h2>Made for You</h2>
+								<p>Developing a solution that integrates seamlessly with your existing setup and goals.</p>
 							</header>
 							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
+								<li><a href="#" class="button fit primary">Contract us</a></li>
 								<li><a href="#" class="button fit">Learn More</a></li>
 							</ul>
 						</div>
@@ -236,6 +251,7 @@
 							<li>&copy; Segora</li><li>Design: Nelong Team</a></li>
 						</ul>
 					</footer>
+			</div>
 			</div>
 
 		<!-- Scripts -->
