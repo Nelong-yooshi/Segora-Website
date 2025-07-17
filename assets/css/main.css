@@ -4099,7 +4099,7 @@ input, select, textarea {
   background-image: url("../../images/bg-black.png"); 
   background-repeat: no-repeat;
   background-size: cover;
-  position: sticky;
+  position: relative;
   top: 0;
   height: 100vh;
   overflow: hidden;
