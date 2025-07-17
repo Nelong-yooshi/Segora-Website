@@ -3668,7 +3668,7 @@ input, select, textarea {
 			text-align: center;
 			text-transform: uppercase;
 			width: 16em;
-			z-index: 1;
+			z-index: 9999;
 		}
 
 			#banner .more:after {
