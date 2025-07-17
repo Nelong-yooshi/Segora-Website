@@ -3668,7 +3668,7 @@ input, select, textarea {
 			text-align: center;
 			text-transform: uppercase;
 			width: 16em;
-			z-index: 9999;
+			z-index: 1;
 		}
 
 			#banner .more:after {
@@ -4131,6 +4131,8 @@ input, select, textarea {
  @supports (animation-timeline: scroll()) {
 	@media (prefers-reduced-motion: no-preference) {
 	.stuck-grid .grid-item {
+		color: aqua;
+		font-size: large;
 		animation: zoom-in linear both;
 		animation-timeline: scroll(root block);
 		will-change: transform, opacity, filter;
