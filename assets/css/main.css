@@ -4145,13 +4145,19 @@ input, select, textarea {
 	}
 }
 @supports not (animation-timeline: scroll()) {
-	@media  not (prefers-reduced-motion: no-preference) {
-			.stuck-grid .grid-item {
-			display: none;
-			.main-image-support {
-				display: none;
-			}
-		}
+	.stuck-grid .grid-item {
+		display: none;
+	}
+	.main-image-support {
+		display: none;
+	}
+}
+@media not (prefers-reduced-motion: no-preference){
+	.stuck-grid .grid-item {
+		display: none;
+	}
+	.main-image-support {
+		display: none;
 	}
 }
 
