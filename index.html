@@ -55,7 +55,7 @@
 							</p> -->
 							<div>
 								<div>Join the Segora Agora</div>
-								<div>Reclaim Data Sovereignty!</div>
+								<div>Reclaim Data Sovereignty</div>
 							</div>
 						</div>
 						<a href="#one" class="more scrolly">Learn More</a>
@@ -91,16 +91,13 @@
 
 						<script>
 						function updateImage() {
-						const img = document.getElementById('responsive-img');
-						const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-						img.src = isPortrait ? "images/dopepic_mobile.png" : "images/dopepic.png";
-						}
+							const img = document.getElementById('responsive-img');
+							const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+							img.src = isPortrait ? "images/dopepic_mobile.png" : "images/dopepic.png";
+							}
 
-						// 初次載入時判斷一次
-						updateImage();
-
-						// 當視窗大小改變時再判斷（支援旋轉）
-						window.addEventListener('resize', updateImage);
+							updateImage();
+							window.addEventListener('resize', updateImage);
 						</script>
 						
 						<div class="stuck-grid">
@@ -155,7 +152,7 @@
 							<div class="grid-item">On-chain / Off-chain</div>
 							<div class="grid-item">Data Sovereignty</div>
 						</div>
-
+					</div>
 					<div class="spacer"></div>
 				</section>
 
