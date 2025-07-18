@@ -87,14 +87,16 @@
 					<div class="spacer"></div>
 
 					<div class="sticky-container wrapper-pin">
-						<img id="responsive-img" src="images/dopepic.png" alt="Responsive image" class="main-image-support">
-						<img id="responsive-img" src="images/dopepic.png" alt="Responsive image" class="main-image-unsupport">
+						<img id="responsive-img1" src="images/dopepic.png" alt="Responsive image" class="main-image-support">
+						<img id="responsive-img2" src="images/dopepic_mobile.png" alt="Responsive image" class="main-image-unsupport">
 
 						<script>
 						function updateImage() {
-							const img = document.getElementById('responsive-img');
+							const img1 = document.getElementById('responsive-img1');
+							const img2 = document.getElementById('responsive-img2');
 							const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-							img.src = isPortrait ? "images/dopepic_mobile.png" : "images/dopepic.png";
+								img1.src = isPortrait ? "images/dopepic_mobile.png" : "images/dopepic.png";
+								img2.src = isPortrait ? "images/dopepic_mobile.png" : "images/dopepic.png";
 							}
 
 							updateImage();
