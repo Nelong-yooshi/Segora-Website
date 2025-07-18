@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // 等待頁面載入完畢再啟動動畫
 window.addEventListener("load", () => {
-  const image = document.querySelector(".main-image");
+  const image = document.querySelector(".main-image-support");
 
   if (!image.complete) {
     image.addEventListener("load", () => setupScrollAnimations());
@@ -16,12 +16,12 @@ window.addEventListener("load", () => {
   function setupScrollAnimations() {
     // 圖片進場動畫
     ScrollTrigger.create({
-      trigger: ".main-image",
+      trigger: ".main-image-support",
       start: "top 80%",
       once: true,
       onEnter: () => {
         gsap.fromTo(
-          ".main-image",
+          ".main-image-support",
           {
             y: "-200%",
             opacity: 0
@@ -48,7 +48,7 @@ window.addEventListener("load", () => {
           markers: false
         }
       })
-      .to(".main-image", {
+      .to(".main-image-support", {
         scale: 1.2,
         transformOrigin: "center center",
         ease: "power1.inOut"

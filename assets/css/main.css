@@ -4049,7 +4049,9 @@ input, select, textarea {
   align-items: center; 
 } */
 
-.main-image {
+
+
+.main-image-support, .main-image-unsupport {
   position: absolute;
   justify-content: center;
   align-items: center; 
@@ -4131,17 +4133,25 @@ input, select, textarea {
 
  @supports (animation-timeline: scroll()) {
 	@media (prefers-reduced-motion: no-preference) {
-	.stuck-grid .grid-item {
-		font-size: large;
-		animation: zoom-in linear both;
-		animation-timeline: scroll(root block);
-		will-change: transform, opacity, filter;
-	}
+		.stuck-grid .grid-item {
+			font-size: large;
+			animation: zoom-in linear both;
+			animation-timeline: scroll(root block);
+			will-change: transform, opacity, filter;
+		}
+		.main-image-unsupport {
+			display: none;
+		}
 	}
 }
 @supports not (animation-timeline: scroll()) {
-  .stuck-grid .grid-item {
-		display: none;
+	@media  not (prefers-reduced-motion: no-preference) {
+			.stuck-grid .grid-item {
+			display: none;
+			.main-image-support {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -4287,3 +4297,4 @@ input, select, textarea {
 .bottom-background {
 	background-color: #cccccc;
 }
+
