@@ -24,13 +24,14 @@
 						<h1><a href="index.html">Segora</a></h1>
 						<nav id="nav">
 							<ul>
-								<li class="special language-dropdown">
-									<a href="javascript:void(0);" class="languageToggle">Language</a>
-									<ul class="language-menu">
-										<li><a href="#" onclick="setLanguage('en');return false;">English</a></li>
-										<li><a href="#" onclick="setLanguage('zh');return false;">中文</a></li>
-									</ul>
-								</li>
+								<div class="language-dropdown">
+									<button id="langBtn" ><h5 id="langBtn-word">Language</h5></button>
+									<div class="dropdown-content" id="langMenu">
+									<li><a href="#" data-lang="en" onclick="setLanguage('en');return false;">English</a></li>
+									<li><a href="#" data-lang="jp" onclick="setLanguage('jp');return false;">日本語</a></li>
+									<li><a href="#" data-lang="zh" onclick="setLanguage('zh');return false;">中文</a></li>
+									</div>
+								</div>
 								<li class="special">
 									<a href="#menu" class="menuToggle" data-i18n="meun"><span>Menu</span></a>
 									<div id="menu">
@@ -64,7 +65,7 @@
 								<div data-i18n="slogan2">Reclaim Data Sovereignty</div>
 							</div>
 						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
+						<a href="#one" class="more scrolly" data-i18n="learn_more">Learn More</a>
 					</section>
 				<!-- 
 					<section id="banner">
@@ -110,56 +111,56 @@
 						</script>
 						
 						<div class="stuck-grid">
-							<div class="grid-item">Blockchain</div>
-							<div class="grid-item">Integrity</div>
-							<div class="grid-item">Access Control</div>
-							<div class="grid-item">Distributed Ledger</div>
-							<div class="grid-item">Smart Contract Auditing</div>
-							<div class="grid-item">Data Governance</div>
-							<div class="grid-item">Accountability</div>
-							<div class="grid-item">Differential Privacy</div>
-							<div class="grid-item">Availability</div>
-							<div class="grid-item">Decentralized Finance</div>
-							<div class="grid-item special"><b>Segora</b></div>
-							<div class="grid-item">Model Training</div>
-							<div class="grid-item">Privacy</div>
-							<div class="grid-item">subgrid</div>
-							<div class="grid-item">Explainability</div>
-							<div class="grid-item">Fraud Detection</div>
-							<div class="grid-item">Inference</div>
-							<div class="grid-item">Smart Contract</div>
-							<div class="grid-item">Digital Identity</div>
-							<div class="grid-item">Decentralized Identifier</div>
-							<div class="grid-item">Encryption / Decryption</div>
-							<div class="grid-item">KYC / KYB</div>
-							<div class="grid-item">Trusted Execution Environment</div>
-							<div class="grid-item">Data Sharing</div>
-							<div class="grid-item">Interoperability</div>
-							<div class="grid-item">Confidentiality</div>
-							<div class="grid-item">Consortium Chain</div>
-							<div class="grid-item">initial-letter</div>
-							<div class="grid-item">Integrity</div>
-							<div class="grid-item">Data Labeling</div>
-							<div class="grid-item">Secure Multi-Party Computation</div>
-							<div class="grid-item">Tokenization</div>
-							<div class="grid-item">Anti-Money Laundering</div>
-							<div class="grid-item">Data Marketplace</div>
-							<div class="grid-item">Compliance</div>
-							<div class="grid-item">Artificial Intelligence</div>
-							<div class="grid-item">Data Federation</div>
-							<div class="grid-item">APIs / SDKs</div>
-							<div class="grid-item">Security</div>
-							<div class="grid-item">Blockchain-as-a-Service</div>
-							<div class="grid-item">Audit Trail</div>
-							<div class="grid-item">Decentralization</div>
-							<div class="grid-item">Immutable</div>
-							<div class="grid-item">Machine Learning</div>
-							<div class="grid-item">Zero-Knowledge Proof </div>
-							<div class="grid-item">Anomaly Detection</div>
-							<div class="grid-item">AI Governance</div>
-							<div class="grid-item">RegTech</div>
-							<div class="grid-item">On-chain / Off-chain</div>
-							<div class="grid-item">Data Sovereignty</div>
+							<div class="grid-item" data-i18n="animation_word_00">Blockchain</div>
+							<div class="grid-item" data-i18n="animation_word_01">Integrity</div>
+							<div class="grid-item" data-i18n="animation_word_02">Access Control</div>
+							<div class="grid-item" data-i18n="animation_word_03">Distributed Ledger</div>
+							<div class="grid-item" data-i18n="animation_word_04">Smart Contract Auditing</div>
+							<div class="grid-item" data-i18n="animation_word_05">Data Governance</div>
+							<div class="grid-item" data-i18n="animation_word_06">Accountability</div>
+							<div class="grid-item" data-i18n="animation_word_07">Differential Privacy</div>
+							<div class="grid-item" data-i18n="animation_word_08">Availability</div>
+							<div class="grid-item" data-i18n="animation_word_09">Decentralized Finance</div>
+							<div class="grid-item special" data-i18n="animation_word_10"><b>Segora</b></div>
+							<div class="grid-item" data-i18n="animation_word_11">Model Training</div>
+							<div class="grid-item" data-i18n="animation_word_12">Privacy</div>
+							<div class="grid-item" data-i18n="animation_word_13">subgrid</div>
+							<div class="grid-item" data-i18n="animation_word_14">Explainability</div>
+							<div class="grid-item" data-i18n="animation_word_15">Fraud Detection</div>
+							<div class="grid-item" data-i18n="animation_word_16">Inference</div>
+							<div class="grid-item" data-i18n="animation_word_17">Smart Contract</div>
+							<div class="grid-item" data-i18n="animation_word_18">Digital Identity</div>
+							<div class="grid-item" data-i18n="animation_word_19">Decentralized Identifier</div>
+							<div class="grid-item" data-i18n="animation_word_20">Encryption / Decryption</div>
+							<div class="grid-item" data-i18n="animation_word_21">KYC / KYB</div>
+							<div class="grid-item" data-i18n="animation_word_22">Trusted Execution Environment</div>
+							<div class="grid-item" data-i18n="animation_word_23">Data Sharing</div>
+							<div class="grid-item" data-i18n="animation_word_24">Interoperability</div>
+							<div class="grid-item" data-i18n="animation_word_25">Confidentiality</div>
+							<div class="grid-item" data-i18n="animation_word_26">Consortium Chain</div>
+							<div class="grid-item" data-i18n="animation_word_27">initial-letter</div>
+							<div class="grid-item" data-i18n="animation_word_28">Integrity</div>
+							<div class="grid-item" data-i18n="animation_word_29">Data Labeling</div>
+							<div class="grid-item" data-i18n="animation_word_30">Secure Multi-Party Computation</div>
+							<div class="grid-item" data-i18n="animation_word_31">Tokenization</div>
+							<div class="grid-item" data-i18n="animation_word_32">Anti-Money Laundering</div>
+							<div class="grid-item" data-i18n="animation_word_33">Data Marketplace</div>
+							<div class="grid-item" data-i18n="animation_word_34">Compliance</div>
+							<div class="grid-item" data-i18n="animation_word_35">Artificial Intelligence</div>
+							<div class="grid-item" data-i18n="animation_word_36">Data Federation</div>
+							<div class="grid-item" data-i18n="animation_word_37">APIs / SDKs</div>
+							<div class="grid-item" data-i18n="animation_word_38">Security</div>
+							<div class="grid-item" data-i18n="animation_word_39">Blockchain-as-a-Service</div>
+							<div class="grid-item" data-i18n="animation_word_40">Audit Trail</div>
+							<div class="grid-item" data-i18n="animation_word_41">Decentralization</div>
+							<div class="grid-item" data-i18n="animation_word_42">Immutable</div>
+							<div class="grid-item" data-i18n="animation_word_43">Machine Learning</div>
+							<div class="grid-item" data-i18n="animation_word_44">Zero-Knowledge Proof </div>
+							<div class="grid-item" data-i18n="animation_word_45">Anomaly Detection</div>
+							<div class="grid-item" data-i18n="animation_word_46">AI Governance</div>
+							<div class="grid-item" data-i18n="animation_word_47">RegTech</div>
+							<div class="grid-item" data-i18n="animation_word_48">On-chain / Off-chain</div>
+							<div class="grid-item" data-i18n="animation_word_49">Data Sovereignty</div>
 						</div>
 					</div>
 					<div class="spacer"></div>
@@ -273,5 +274,19 @@
   			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 			<script src="assets/js/scroll-animation.js"></script>
 			<script src="assets/js/color-change.js"></script>
+			<script>
+			const langBtn = document.getElementById("langBtn");
+			const langMenu = document.getElementById("langMenu");
+
+			langBtn.addEventListener("click", () => {
+				langMenu.style.display = (langMenu.style.display === "block") ? "none" : "block";
+			});
+
+			window.addEventListener("click", (e) => {
+				if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+				langMenu.style.display = "none";
+				}
+			});
+			</script>
 	</body>
 </html>

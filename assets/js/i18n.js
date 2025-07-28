@@ -19,6 +19,6 @@ function loadLanguage(lang) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem('lang') || navigator.language.slice(0, 2) || 'en';
-  const defaultLang = ['zh', 'en'].includes(savedLang) ? savedLang : 'en';
+  const defaultLang = ['zh', 'en', 'jp'].includes(savedLang) ? savedLang : 'en';
   setLanguage(defaultLang);
 });
