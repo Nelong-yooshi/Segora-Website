@@ -48,7 +48,7 @@ window.addEventListener("load", () => {
           markers: false
         }
       })
-      .to(".main-image", {
+      .to(".main-image-support", {
         scale: 1.2,
         transformOrigin: "center center",
         ease: "power1.inOut"

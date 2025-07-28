@@ -24,13 +24,19 @@
 						<h1><a href="index.html">Segora</a></h1>
 						<nav id="nav">
 							<ul>
+								<li class="special language-dropdown">
+									<a href="javascript:void(0);" class="languageToggle">Language</a>
+									<ul class="language-menu">
+										<li><a href="#" onclick="setLanguage('en');return false;">English</a></li>
+										<li><a href="#" onclick="setLanguage('zh');return false;">中文</a></li>
+									</ul>
+								</li>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<a href="#menu" class="menuToggle" data-i18n="meun"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
+											<li><a href="index.html" data-i18n="home">Home</a></li>
+											<li><a href="company.html" data-i18n="company">Company</a></li>
 											<li><a href="#">Sign Up</a></li>
 											<li><a href="#">Log In</a></li>
 										</ul>
@@ -54,8 +60,8 @@
 							</span>
 							</p> -->
 							<div>
-								<div>Join the Segora Agora!</div>
-								<div>Reclaim Data Sovereignty</div>
+								<div data-i18n="slogan1">Join the Segora Agora</div>
+								<div data-i18n="slogan2">Reclaim Data Sovereignty</div>
 							</div>
 						</div>
 						<a href="#one" class="more scrolly">Learn More</a>
@@ -255,6 +261,7 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="assets/js/i18n.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
