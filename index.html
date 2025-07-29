@@ -66,81 +66,43 @@
 					<div class="spacer"></div>
 
 					<div class="sticky-container wrapper-pin">
-						<div id="diagram-container">
-						<picture>
-							<source 
-								srcset="images/main_diagram-800.webp 1x, images/main_diagram-1600.webp 2x" 
-								type="image/webp"
-							>
-							<img 
-								id="responsive-img1"
-								src="images/main_diagram-800.webp" 
-								alt="Home Page Features and Processdiagram Visual" 
-								class="main-image-support"
-								width="800"
-								height="292"
-								loading="lazy"
-								decoding="async"
-							>
-						</picture>
-						<picture>
-							<source 
-								srcset="images/main_diagram_mobile-250.webp 1x, images/main_diagram_mobile-500.webp 2x" 
-								type="image/webp"
-							>
-							<img 
+						<img 
+							id="responsive-img1"
+							src="images/main_diagram-800.webp" 
+							srcset="images/main_diagram-800.webp 1x, images/main_diagram-1600.webp 2x" 
+							alt="Home Page Features and Processdiagram Visual" 
+							class="main-image-support"
+							loading="lazy"
+							decoding="async"
+						>
+						<img 
 								id="responsive-img2"
 								src="images/main_diagram_mobile-250.webp"
+								srcset="images/main_diagram_mobile-250.webp 1x, images/main_diagram_mobile-500.webp 2x" 
 								alt="Home Page Features and Processdiagram Mobile Visual"
 								class="main-image-unsupport"
-								width="247"
-								height="488"
 								loading="lazy"
 								decoding="async"
-							>
-						</picture>
-						</div>
+						>
 
 						<script>
-							function updateImage() {
-								const container = document.getElementById('diagram-container');
-								const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-
-								container.innerHTML = '';
-
-								const picture = document.createElement('picture');
-								const source = document.createElement('source');
-								const img1 = document.createElement('img');
-								const img2 = document.createElement('img');
-
+						function updateImage() {
+							const img1 = document.getElementById('responsive-img1');
+							const img2 = document.getElementById('responsive-img2');
+							const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 								if (isPortrait) {
-									source.srcset = "images/main_diagram_mobile-250.webp 1x, images/main_diagram_mobile-500.webp 2x";
 									img1.src = "images/main_diagram_mobile-250.webp";
-									img1.alt = "Home Page Features and Processdiagram Mobile Visual";
-									img1.className = "main-image-support";
+									img1.srcset = "images/main_diagram_mobile-250.webp 1x, images/main_diagram_mobile-500.webp 2x";
+
 									img2.src = "images/main_diagram_mobile-250.webp";
-									img2.alt = "Home Page Features and Processdiagram Mobile Visual";
-									img2.className = "main-image-unsupport";
+									img2.srcset = "images/main_diagram_mobile-250.webp 1x, images/main_diagram_mobile-500.webp 2x";
 								} else {
-									source.srcset = "images/main_diagram-800.webp 1x, images/main_diagram-1600.webp 2x";
 									img1.src = "images/main_diagram-800.webp";
-									img1.alt = "Home Page Features and Processdiagram Visual";
-									img1.className = "main-image-support";
+									img1.srcset = "images/main_diagram-800.webp 1x, images/main_diagram-1600.webp 2x";
+
 									img2.src = "images/main_diagram-800.webp";
-									img2.alt = "Home Page Features and Processdiagram Visual";
-									img2.className = "main-image-unsupport";
+									img2.srcset = "images/main_diagram-800.webp 1x, images/main_diagram-1600.webp 2x";
 								}
-
-								source.type = "image/webp";
-								img1.loading = "lazy";
-								img1.decoding = "async";
-								img2.loading = "lazy";
-								img2.decoding = "async";
-
-								picture.appendChild(source);
-								picture.appendChild(img1);
-								picture.appendChild(img2);
-								container.appendChild(picture);
 							}
 
 							updateImage();
