@@ -24,18 +24,24 @@
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header">
+					<header id="header" class="alt">
 						<h1><a href="index.html">Segora</a></h1>
 						<nav id="nav">
 							<ul>
+								<div class="language-dropdown">
+									<button id="langBtn" ><h5 id="langBtn-word">Language</h5></button>
+									<div class="dropdown-content" id="langMenu">
+									<li><a href="#" data-lang="en" onclick="setLanguage('en');return false;">English</a></li>
+									<li><a href="#" data-lang="jp" onclick="setLanguage('jp');return false;">日本語</a></li>
+									<li><a href="#" data-lang="zh" onclick="setLanguage('zh');return false;">中文</a></li>
+									</div>
+								</div>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<a href="#menu" class="menuToggle" data-i18n="meun">Menu</a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="company.html">Company</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
+											<li><a href="index.html" data-i18n="home">Home</a></li>
+											<li><a href="company.html" data-i18n="company">Company</a></li>
 										</ul>
 									</div>
 								</li>
@@ -46,7 +52,7 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Company</h2>
+							<h2 data-i18n="company">Company</h2>
 							<p>About us. Segora!!!</p>
 						</header>
 
