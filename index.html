@@ -104,8 +104,19 @@
 							const img1 = document.getElementById('responsive-img1');
 							const img2 = document.getElementById('responsive-img2');
 							const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-								img1.src = isPortrait ? "images/dopepic_mobile.png" : "images/dopepic.png";
-								img2.src = isPortrait ? "images/dopepic_mobile.png" : "images/dopepic.png";
+								if (isPortrait) {
+									img1.src = "images/main_diagram_mobile-250.webp";
+									img1.srcset = "images/main_diagram_mobile-250.webp 1x, images/main_diagram_mobile-500.webp 2x";
+
+									img2.src = "images/main_diagram_mobile-250.webp";
+									img2.srcset = "images/main_diagram_mobile-250.webp 1x, images/main_diagram_mobile-500.webp 2x";
+								} else {
+									img1.src = "images/main_diagram-800.webp";
+									img1.srcset = "images/main_diagram-800.webp 1x, images/main_diagram-1600.webp 2x";
+
+									img2.src = "images/main_diagram-800.webp";
+									img2.srcset = "images/main_diagram-800.webp 1x, images/main_diagram-1600.webp 2x";
+								}
 							}
 
 							updateImage();
