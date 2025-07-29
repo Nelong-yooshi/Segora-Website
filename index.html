@@ -3,7 +3,12 @@
 	<head>
 		<title>Segora</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Segora is a federated blockchain platform for secure and private data exchange, enabling invisible but usable data flows.">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic">
+		</noscript>
 		<link rel="stylesheet" href="./assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/png" href="/assets/seg-icon/favicon-96x96.png" sizes="96x96" />
@@ -49,15 +54,6 @@
 					<section id="banner">
 						<div class="inner">
 							<h2>Segora</h2>
-							<!-- <p class="segora-taglines">
-							<span class="mobile-only">Sovereignty 
-								<span class="nowrap">× Exchange</span> 
-								<span class="nowrap">× Governance</span></span>
-							<span class="desktop-only">
-								Join the Segora Agora<br />
-								Reclaim Data Sovereignty
-							</span>
-							</p> -->
 							<div>
 								<div data-i18n="slogan1">Join the Segora Agora</div>
 								<div data-i18n="slogan2">Reclaim Data Sovereignty</div>
@@ -65,35 +61,43 @@
 						</div>
 						<a href="#one" class="more scrolly" data-i18n="learn_more">Learn More</a>
 					</section>
-				<!-- 
-					<section id="banner">
-						<section id="banner" class="section hero">
-							<div class="inner">
-								<h2>Segora</h2>
-								<p class="segora-taglines">
-								<span class="mobile-only">Sovereignty 
-									<span class="nowrap">× Exchange</span> 
-									<span class="nowrap">× Governance</span></span>
-								<span class="desktop-only">
-									Join the Segora Agora<br />
-									Reclaim Data Sovereignty
-								</span>
-								</p>
-							</div>
-							<a href="#one" class="more scrolly">Learn More</a>
-						</section>
-						<div class="image-container">
-							<img src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="image" class="hero-image">
-						</div>
-					</section>
-				-->
 				<!-- One -->
 				<section id="one" class="sticky-section">
 					<div class="spacer"></div>
 
 					<div class="sticky-container wrapper-pin">
-						<img id="responsive-img1" src="images/dopepic.png" alt="Responsive image" class="main-image-support">
-						<img id="responsive-img2" src="images/dopepic_mobile.png" alt="Responsive image" class="main-image-unsupport">
+						<picture>
+							<source 
+								srcset="images/main_diagram-800.webp 1x, images/main_diagram-1600.webp 2x" 
+								type="image/webp"
+							>
+							<img 
+								id="responsive-img1"
+								src="images/main_diagram-800.webp" 
+								alt="Home Page Features and Processdiagram Visual" 
+								class="main-image-support"
+								width="800"
+								height="292"
+								loading="lazy"
+								decoding="async"
+							>
+						</picture>
+						<picture>
+							<source 
+								srcset="images/main_diagram_mobile-250.webp 1x, images/main_diagram_mobile-500.webp 2x" 
+								type="image/webp"
+							>
+							<img 
+								id="responsive-img2"
+								src="images/main_diagram_mobile-250.webp"
+								alt="Home Page Features and Processdiagram Mobile Visual"
+								class="main-image-unsupport"
+								width="247"
+								height="488"
+								loading="lazy"
+								decoding="async"
+							>
+						</picture>
 
 						<script>
 						function updateImage() {
@@ -269,22 +273,9 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"  defer></script>
 			<script src="assets/js/scroll-animation.js"></script>
 			<script src="assets/js/color-change.js"></script>
-			<script>
-			const langBtn = document.getElementById("langBtn");
-			const langMenu = document.getElementById("langMenu");
-
-			langBtn.addEventListener("click", () => {
-				langMenu.style.display = (langMenu.style.display === "block") ? "none" : "block";
-			});
-
-			window.addEventListener("click", (e) => {
-				if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
-				langMenu.style.display = "none";
-				}
-			});
-			</script>
+			<script src="assets/js/language-button.js"></script>
 	</body>
 </html>
