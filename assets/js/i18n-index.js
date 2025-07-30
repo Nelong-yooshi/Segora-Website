@@ -11,36 +11,39 @@ function loadLanguage(lang) {
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (data[key]) {
-          if (key === 'core_principles_description') {
-            el.innerHTML = data[key];
-            if (el.splitInstance) el.splitInstance.revert(); // 如果有 splitText，先還原
-            const split = new SplitText(el, {
-              type: "words",
-              wordsClass: "word"
-            });
-            el.splitInstance = split;
-
-            const tl = gsap.timeline({
-              scrollTrigger: {
-                trigger: "#textSection",
-                start: "top-=100 top",
-                end: "+=200%",
-                pin: true,
-                scrub: true,
-                markers: false
-              }
-            });
-            tl.set(split.words, {
-              opacity: 1,
-              stagger: 0.1
-            }, 0.1);
-            tl.to({}, { duration: 1 });
-          } else {
-            el.textContent = data[key];
-          }
+          el.innerHTML = data[key];
         }
       });
+
+      resetSplitTextAnimation();
     });
+}
+
+function resetSplitTextAnimation() {
+  document.querySelectorAll(".word").forEach(el => el.remove());
+
+  const split = new SplitText(".wrapper-split p", {
+    type: "words",
+    wordsClass: "word"
+  });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#textSection",
+      start: "top-=100 top",
+      end: "+=200%",
+      pin: true,
+      scrub: true,
+      markers: false
+    }
+  });
+
+  tl.set(split.words, {
+    opacity: 1,
+    stagger: 0.1
+  }, 0.1);
+
+  tl.to({}, { duration: 1 });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
