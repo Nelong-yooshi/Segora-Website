@@ -54,5 +54,19 @@
   "animation_word_46": "AI 治理",
   "animation_word_47": "監管科技",
   "animation_word_48": "鏈上 / 鏈下",
-  "animation_word_49": "資料主權"
+  "animation_word_49": "資料主權",
+  "core_principles": "Segora 平台核心原則",
+  "core_principles_description": "打造一個安全且透明的系統，以促進責任導向的協作。<br />透過去中心化與可驗證的控制機制，全面守護資料隱私。",
+  "principle_1": "主權",
+  "principle_1_description": "使用者重新掌握資料的完整主控權，取代原本由中央機構所掌控的模式。",
+  "principle_2": "可用性",
+  "principle_2_description": "資料可在機密執行環境中以明文處理，在保護隱私的同時強化模型的泛化能力。",
+  "principle_3": "交換",
+  "principle_3_description": "實現資料與數位資產的安全高效流通，支援跨機構協作。",
+  "principle_4": "去中心化",
+  "principle_4_description": "無單一控制點，信任透過多個獨立節點分散建立。",
+  "principle_5": "治理",
+  "principle_5_description": "使用者可自由決定資料的使用方式、共享範圍與治理規則。",
+  "principle_6": "可稽核性",
+  "principle_6_description": "所有操作皆被透明記錄並不可篡改，確保信任與問責。"
 }

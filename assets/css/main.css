@@ -2549,35 +2549,68 @@ input, select, textarea {
 	}
 
 		.features li {
-			padding: 4em 4em 2em 6em ;
-			display: block;
+			padding: 4em 4em 4em 4em ;
+
 			position: relative;
 			text-align: left;
 			width: 50%;
+			overflow: hidden;
+		}
+
+		.features li::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background: linear-gradient(
+				0deg, 
+				transparent, 
+				transparent 50%, 
+				rgba(0,255,255,0.6)
+			);
+			transform: rotate(-45deg)  translateY(-100%);
+			transition: all 1s ease;
+			opacity: 0;
+		}
+
+		.features li:hover {
+			transform: perspective(1000px) translateZ(100px);
+			box-shadow: 0 0 50px rgba(0,255,255,0.5);
+			z-index: 10;
+		}
+
+		.features li:hover::before {
+			opacity: 1;
+			transform: rotate(-45deg) translateY(200%);
+		}
+		.features li:hover::after {
+			z-index: -1;
 		}
 
 			.features li:nth-child(1) {
-				background-color: rgba(0, 0, 0, 0.035);
+				background-color: rgb(77, 80, 142);
 			}
 
 			.features li:nth-child(2) {
-				background-color: rgba(0, 0, 0, 0.07);
+				background-color: rgb(74, 77, 137);
 			}
 
 			.features li:nth-child(3) {
-				background-color: rgba(0, 0, 0, 0.105);
+				background-color: rgb(72, 74, 131);
 			}
 
 			.features li:nth-child(4) {
-				background-color: rgba(0, 0, 0, 0.14);
+				background-color: rgb(69, 71, 126);
 			}
 
 			.features li:nth-child(5) {
-				background-color: rgba(0, 0, 0, 0.175);
+				background-color: rgb(66, 68, 121);
 			}
 
 			.features li:nth-child(6) {
-				background-color: rgba(0, 0, 0, 0.21);
+				background-color: rgb(63, 65, 116);
 			}
 
 			.features li:nth-child(7) {
@@ -2651,6 +2684,34 @@ input, select, textarea {
 					}
 
 			}
+
+	.features li h3 {
+		display: inline-block;
+		font-weight: bold;
+		color: white;
+		transition: all 0.5s ease;
+		background-size: 200% auto;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: white;
+		animation: none;
+	}
+
+	.features li:hover h3 {
+		background-image: linear-gradient(90deg, #00ffff, #ff37ff, #00ffff);
+		-webkit-text-fill-color: transparent;
+		animation: textFlow 3s linear infinite;
+		filter: drop-shadow(0 0 4px rgb(85, 0, 255));
+	}
+
+	@keyframes textFlow {
+		0% {
+			background-position: 0% 50%;
+		}
+		100% {
+			background-position: 200% 50%;
+		}
+	}
 
 /* Spotlight */
 
@@ -4381,7 +4442,7 @@ input, select, textarea {
   background-color: #f0f0f0;
 }
 
-/* @font-face {
+@font-face {
   font-family: 'Font Awesome 5 Brands';
   src: url('/assets/webfonts/fa-brands-400.woff2') format('woff2'),
 	   url('/assets/webfonts/fa-brands-400.woff') format('woff');
@@ -4393,4 +4454,9 @@ input, select, textarea {
   src: url('/assets/webfonts/fa-solid-900.woff2') format('woff2'),
 	   url('/assets/webfonts/fa-solid-900.woff') format('woff');
   font-display: swap;
-} */
+}
+
+.white .word {
+  opacity: 0.3;
+  position: relative !important;
+}

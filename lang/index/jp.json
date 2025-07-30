@@ -54,5 +54,19 @@
   "animation_word_46": "AIガバナンス",
   "animation_word_47": "レグテック",
   "animation_word_48": "オンチェーン / オフチェーン",
-  "animation_word_49": "データ主権"
+  "animation_word_49": "データ主権",
+  "core_principles": "Segora プラットフォームのコア原則",
+  "core_principles_description": "信頼に基づく責任ある協業を可能にする、安全で透明性の高いシステムを構築します。<br />分散化と検証可能な制御を通じて、プライバシーを徹底的に保護します。",
+  "principle_1": "主権",
+  "principle_1_description": "ユーザーは中央集権的な管理を排し、自身のデータを完全に自律的に管理できます。",
+  "principle_2": "可用性",
+  "principle_2_description": "データは機密実行環境（TEE）内で平文処理が可能となり、プライバシーを守りながらモデルの汎化性能を向上させます。",
+  "principle_3": "交換",
+  "principle_3_description": "安全かつ効率的なデータやデジタル資産の移転を実現し、機関間連携を支援します。",
+  "principle_4": "分散性",
+  "principle_4_description": "単一の管理者に依存せず、信頼は独立した複数のノードによって分散的に構築されます。",
+  "principle_5": "ガバナンス",
+  "principle_5_description": "ユーザーは自身のデータの利用、共有、管理方法を自由に決定できます。",
+  "principle_6": "監査可能性",
+  "principle_6_description": "すべての操作は透明に記録され、改ざん不可能な形で保存されるため、信頼性と説明責任を確保します。"
 }

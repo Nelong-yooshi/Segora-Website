@@ -54,5 +54,19 @@
     "animation_word_46": "AI Governance",
     "animation_word_47": "RegTech",
     "animation_word_48": "On-chain / Off-chain",
-    "animation_word_49": "Data Sovereignty"
+    "animation_word_49": "Data Sovereignty",
+    "core_principles": "Core Principles of the Segora Platform",
+    "core_principles_description": "A secure and transparent system enabling responsible collaboration.<br />Designed to preserve privacy through decentralization and verifiable control.",
+    "principle_1": "Sovereignty",
+    "principle_1_description": "Users reclaim full control over their data, replacing centralized authority with self-governed ownership.",
+    "principle_2": "Availability",
+    "principle_2_description": "Data can be processed in plaintext inside TEE, enhancing model generalization without compromising privacy.",
+    "principle_3": "Exchange",
+    "principle_3_description": "Secure and efficient transfer of data or digital assets, supporting cross-institutional collaboration.",
+    "principle_4": "Decentralization",
+    "principle_4_description": "No single point of control—trust is distributed across independent, interconnected nodes.",
+    "principle_5": "Governance",
+    "principle_5_description": "Users can freely manage how their data is used, shared, and governed across systems.",
+    "principle_6": "Auditability",
+    "principle_6_description": "All actions are transparently recorded and immutably stored, ensuring accountability and trust."
 }
