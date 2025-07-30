@@ -1,10 +1,12 @@
 console.clear();
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-const split = new SplitText(".wrapper-split p", {
+const el = document.querySelector(".wrapper-split p");
+const split = new SplitText(el, {
   type: "words",
   wordsClass: "word"
 });
+el.splitInstance = split;
 
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -21,7 +23,4 @@ tl.set(split.words, {
   opacity: 1,
   stagger: 0.1
 }, 0.1);
-
-tl.to({}, {
-  duration: 1,
-});
+tl.to({}, { duration: 1 });
