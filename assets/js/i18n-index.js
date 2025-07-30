@@ -15,19 +15,33 @@ function loadLanguage(lang) {
         }
       });
 
-      resetSplitTextAnimation();
+
+      setTimeout(() => resetSplitTextAnimation(), 0);
     });
 }
 
-function resetSplitTextAnimation() {
-  document.querySelectorAll(".word").forEach(el => el.remove());
+let split;
+let tl;
 
-  const split = new SplitText(".wrapper-split p", {
+function resetSplitTextAnimation() {
+  if (tl) {
+    tl.kill();
+    tl = null;
+  }
+
+  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+  if (split) {
+    split.revert();
+    split = null;
+  }
+
+  split = new SplitText(".wrapper-split p", {
     type: "words",
     wordsClass: "word"
   });
 
-  const tl = gsap.timeline({
+  tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#textSection",
       start: "top-=100 top",
