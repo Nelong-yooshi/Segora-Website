@@ -3,5 +3,15 @@
     "home": "Home",
     "company": "Company",
     "about_us": "About us. Segora!!!",
-    ""
+    "inner_text_title1": "Building a Secure & Private Data Exchange Platform",
+    "inner_text_1": "Segora is a federated blockchain platform focused on Sovereignty, Governance, and Exchange, enabling secure and trustworthy data sharing across domains while preserving privacy.",
+    "inner_text_2": "Segora is a federated blockchain designed to support inter-organizational data exchange with built-in guarantees of security, privacy, and governance. Rather than requiring participants to hand over control of their data to a central authority, Segora creates a neutral, co-governed infrastructure that empowers all parties equally.",
+    "inner_text_title2": "Making Data Become Usable But Invisible",
+    "inner_text_3": "At Segora, we believe data should be fully leveraged without compromising privacy. By leveraging technologies like Trusted Execution Environments (TEE), InterPlanetary File System (IPFS), and Differential Privacy, we ensure that data remains encrypted or anonymized throughout its lifecycle. This enables participants to perform statistical analysis, model training, or risk assessment without ever seeing the raw data—making it truly usable but invisible.",
+    "CEO": "Co-Founder & CEO",
+    "CTO": "Co-Founder & CTO",
+    "CEO_name": "Tsai, Cheng-Yen",
+    "CTO_name": "LIU, WEI-LIANG",
+    "CEO_word": "At Segora, our mission is to make data value flow freely—without sacrificing privacy. We believe that true digital transformation must be built on data sovereignty and mutual trust across organizations.",
+    "CTO_word": "We’re not just building another blockchain—we’re engineering a new model of collaboration. Segora enables organizations to compute and co-govern together, while retaining control over their own data—something neither public nor private chains can truly offer."
 }
