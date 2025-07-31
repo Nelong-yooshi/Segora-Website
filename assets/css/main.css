@@ -2732,12 +2732,13 @@ input, select, textarea {
 			-ms-order: 1;
 			order: 1;
 			border-radius: 0;
-			width: 40%;
+			width: 30%;
 		}
 
 			.spotlight .image img {
 				border-radius: 0;
 				width: 100%;
+				padding: 1em 1em 1em 1em ;
 			}
 
 		.spotlight .content {
@@ -2746,8 +2747,8 @@ input, select, textarea {
 			-webkit-order: 2;
 			-ms-order: 2;
 			order: 2;
-			max-width: 48em;
-			width: 60%;
+			max-width: 50em;
+			width: 70%;
 		}
 
 		.spotlight:nth-child(2n) {

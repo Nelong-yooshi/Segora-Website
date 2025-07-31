@@ -25,6 +25,18 @@ gsap.from(".from-right", {
   ease: "power3.out"
 });
 
+gsap.from(".from-left2", {
+  scrollTrigger: {
+    trigger: ".from-left2",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  x: -100,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
 gsap.from(".blur-in1", {
   scrollTrigger: {
     trigger: ".blur-in1",
